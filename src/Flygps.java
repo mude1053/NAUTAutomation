@@ -7,15 +7,18 @@ public class Flygps {
     public static void main(String args[]) throws InterruptedException {
         String expectedText ="Sizin İçin Buradayız!";
         invokeChromeBrowser();
+
         driver.get("https://www.flypgs.com");
         Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[2]/ul/li[1]/div/form/div[1]/div[1]/div/div[2]/div")).click();
    //   driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/label")).click();
         Thread.sleep(2000);
+
      //   driver.findElement(By.xpath("//*[@id='divHeaderCurrency']/div/div/div/div[1]/ul/li[5]/a")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath(("/html/body/div[1]/div[3]/div/div/div/div[1]/ul/li[5]/a"))).click();
-        Thread.sleep(2000);
-        System.out.println("Validation: "+isTextTrue(expectedText));
+     //   Thread.sleep(2000);
+    //    driver.findElement(By.xpath(("/html/body/div[1]/div[3]/div/div/div/div[1]/ul/li[5]/a"))).click();
+      //  Thread.sleep(2000);
+      //  System.out.println("Validation: "+isTextTrue(expectedText));
 
 
 
